@@ -1,7 +1,7 @@
 {
 	"name": "sendgrid-send",
 	"version": "0.0.1",
-	"description": "Generate JSON body for SendGrid mail send API V3",
+	"description": "Generate JSON body for the SendGrid mail API",
 	"scripts": {
 		"build": "tsc && tsc --project tsconfig.cjs.json"
 	},
@@ -33,6 +33,7 @@
 	},
 	"homepage": "https://github.com/hyunbinseo/sendgrid-send#readme",
 	"devDependencies": {
+		"prettier": "^2.8.8",
 		"typescript": "^5.0.4"
 	}
 }
