@@ -9,6 +9,7 @@
 		"type": "git",
 		"url": "git+https://github.com/hyunbinseo/sendgrid-send.git"
 	},
+	"type": "module",
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
