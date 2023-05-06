@@ -1,0 +1,38 @@
+{
+	"name": "sendgrid-send",
+	"version": "0.0.1",
+	"description": "Generate JSON body for SendGrid mail send API V3",
+	"scripts": {
+		"build": "tsc && tsc --project tsconfig.cjs.json"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hyunbinseo/sendgrid-send.git"
+	},
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"require": "./dist/cjs/index.js"
+		}
+	},
+	"files": [
+		"dist/**/*"
+	],
+	"keywords": [
+		"sendgrid",
+		"email",
+		"mail",
+		"send",
+		"api"
+	],
+	"author": "Hyunbin Seo",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/hyunbinseo/sendgrid-send/issues"
+	},
+	"homepage": "https://github.com/hyunbinseo/sendgrid-send#readme",
+	"devDependencies": {
+		"typescript": "^5.0.4"
+	}
+}
