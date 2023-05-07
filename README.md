@@ -18,12 +18,16 @@ You don't need a library to use a REST API. Just create a valid JSON body, and m
 export const generateSgSendBody = (requestBody) => requestBody;
 ```
 
-The `requestBody` is [typed] according to the [API documentation].
+The `requestBody` is [typed] according to the [SendGrid API documentation].
 
 [typed]: dist/index.d.ts
-[API documentation]: https://docs.sendgrid.com/api-reference/mail-send/mail-send
+[SendGrid API documentation]: https://docs.sendgrid.com/api-reference/mail-send/mail-send
 
-## Fetch API
+## Usage
+
+Please reference the [SendGrid API documentation] for all supported values.
+
+### With Fetch API
 
 The `generateSgSendRequest` function returns a [Request] object which can be used with the Fetch API. The URL, method, and HTTP headers are all set.
 
@@ -39,13 +43,14 @@ await fetch(
       personalizations: [{ to: [{ email: 'receiver@domain.com' }] }],
       subject: 'SendGrid and the Fetch API is awesome.',
       content: [{ type: 'text/plain', value: 'Best of both worlds.' }],
+      // ...
     },
     '<<YOUR_API_KEY_HERE>>'
   )
 );
 ```
 
-## Usage
+### Generate Body
 
 ```bash
 npm i sendgrid-send
@@ -73,21 +78,7 @@ await fetch('https://api.sendgrid.com/v3/mail/send', {
 });
 ```
 
-### JavaScript + VS Code
-
-Create a [`jsconfig.json`] file and enable `checkJs`.
-
-[`jsconfig.json`]: https://code.visualstudio.com/docs/languages/jsconfig
-
-```json
-{
-  "compilerOptions": {
-    "checkJs": true
-  }
-}
-```
-
-### TypeScript: Type Only
+### Import Type Only
 
 ```bash
 npm i sendgrid-send -D
@@ -102,12 +93,18 @@ const body = {
 } satisfies SendGridRequestBody;
 ```
 
-### Browser
+## Notes
 
-The library does work on browsers, and it can be imported from [jsDelivr] and other CDNs that mirrors [npm].
+### JavaScript + VS Code
 
-[jsDelivr]: https://www.jsdelivr.com/
-[npm]: https://www.npmjs.com/
+Create a [`jsconfig.json`] file and enable `checkJs`.
 
-> **Warning**
-> The SendGrid API key should not be exposed to the client.
+[`jsconfig.json`]: https://code.visualstudio.com/docs/languages/jsconfig
+
+```json
+{
+  "compilerOptions": {
+    "checkJs": true
+  }
+}
+```
