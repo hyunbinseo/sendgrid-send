@@ -1,6 +1,6 @@
 {
 	"name": "sendgrid-send",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "Generate JSON body for the SendGrid mail API",
 	"scripts": {
 		"build": "tsup index.ts --format cjs,esm --dts --clean"
