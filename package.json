@@ -13,7 +13,7 @@
 	"scripts": {
 		"build": "tsup index.ts --format cjs,esm --dts --clean"
 	},
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "Generate JSON body for the SendGrid mail API",
 	"repository": {
 		"type": "git",
