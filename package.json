@@ -1,19 +1,23 @@
 {
 	"name": "sendgrid-send",
-	"version": "1.0.5",
-	"description": "Generate JSON body for the SendGrid mail API",
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"require": "./dist/index.js",
+			"import": "./dist/index.mjs",
+			"types": "./dist/index.d.ts"
+		}
+	},
 	"scripts": {
 		"build": "tsup index.ts --format cjs,esm --dts --clean"
 	},
+	"version": "1.0.5",
+	"description": "Generate JSON body for the SendGrid mail API",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/hyunbinseo/sendgrid-send.git"
-	},
-	"type": "module",
-	"exports": {
-		"import": "./dist/index.js",
-		"require": "./dist/index.cjs",
-		"types": "./dist/index.d.ts"
 	},
 	"files": [
 		"dist"
