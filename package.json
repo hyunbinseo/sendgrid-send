@@ -3,7 +3,7 @@
 	"version": "1.0.3",
 	"description": "Generate JSON body for the SendGrid mail API",
 	"scripts": {
-		"build": "tsc && tsc --project tsconfig.cjs.json"
+		"build": "tsup index.ts --format cjs,esm --dts --clean"
 	},
 	"repository": {
 		"type": "git",
@@ -12,13 +12,13 @@
 	"type": "module",
 	"exports": {
 		".": {
-			"types": "./dist/index.d.ts",
 			"import": "./dist/index.js",
-			"require": "./dist/cjs/index.js"
+			"require": "./dist/index.cjs",
+			"types": "./dist/index.d.ts"
 		}
 	},
 	"files": [
-		"dist/**/*"
+		"dist"
 	],
 	"keywords": [
 		"sendgrid",
@@ -35,6 +35,6 @@
 	"homepage": "https://github.com/hyunbinseo/sendgrid-send#readme",
 	"devDependencies": {
 		"prettier": "^2.8.8",
-		"typescript": "^5.0.4"
+		"tsup": "^6.7.0"
 	}
 }

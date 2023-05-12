@@ -12,7 +12,7 @@ type Personalization = {
     headers: Record<string, string>;
     send_at: number;
 }>;
-export type SendGridRequestBody = {
+type SendGridRequestBody = {
     personalizations: Array<Personalization>;
     from: Email;
     subject: string;
@@ -42,6 +42,7 @@ export type SendGridRequestBody = {
     };
     ip_pool_name: string;
 }>;
-export declare const generateSgSendBody: (requestBody: SendGridRequestBody) => SendGridRequestBody;
-export declare const generateSgSendRequest: (requestBody: SendGridRequestBody, apiKey: string) => Request;
-export {};
+declare const generateSgSendBody: (requestBody: SendGridRequestBody) => SendGridRequestBody;
+declare const generateSgSendRequest: (requestBody: SendGridRequestBody, apiKey: string) => Request;
+
+export { SendGridRequestBody, generateSgSendBody, generateSgSendRequest };
