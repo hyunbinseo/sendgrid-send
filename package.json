@@ -12,7 +12,7 @@
 	"scripts": {
 		"build": "tsup"
 	},
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"description": "Generate JSON body for the SendGrid mail API",
 	"repository": {
 		"type": "git",
