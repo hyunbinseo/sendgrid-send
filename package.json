@@ -6,12 +6,11 @@
 	"exports": {
 		".": {
 			"require": "./dist/index.js",
-			"import": "./dist/index.mjs",
-			"types": "./dist/index.d.ts"
+			"import": "./dist/index.mjs"
 		}
 	},
 	"scripts": {
-		"build": "tsup index.ts --format cjs,esm --dts --clean"
+		"build": "tsup"
 	},
 	"version": "1.0.6",
 	"description": "Generate JSON body for the SendGrid mail API",
@@ -38,5 +37,8 @@
 	"devDependencies": {
 		"prettier": "^3.0.3",
 		"tsup": "^7.2.0"
+	},
+	"engines": {
+		"node": "^16.15 || >=18"
 	}
 }
