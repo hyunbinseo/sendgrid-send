@@ -1,5 +1,10 @@
 # SendGrid Send
 
+> [!IMPORTANT]  
+> This package has been deprecated. Use the [new-request] package.
+
+[new-request]: https://github.com/hyunbinseo/new-request#readme
+
 You don't need a library to use a REST API. Just create a valid JSON body, and make a POST request to SendGrid.
 
 ## Features
@@ -45,8 +50,8 @@ await fetch(
       content: [{ type: 'text/plain', value: 'Best of both worlds.' }],
       // ...
     },
-    '<<YOUR_API_KEY_HERE>>'
-  )
+    '<<YOUR_API_KEY_HERE>>',
+  ),
 );
 ```
 
